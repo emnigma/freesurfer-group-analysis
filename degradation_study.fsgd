@@ -1,0 +1,12 @@
+GroupDescriptorFile 1
+Title DegradationStudy
+Class MSA-C
+Class Control
+Input sub1_fs Control
+Input sub2_fs Control
+Input sub3-mpa-c_fs MSA-C
+Input sub4-mpa-c_fs MSA-C
+Input sub5-mpa-c_fs MSA-C
+Input sub6_fs Control
+Input sub7_fs Control
+Input sub8_fs Control
