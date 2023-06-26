@@ -3,10 +3,11 @@
 # $2=path to .fsgd file with study
 # $3=path to folder to save results
 # name of .fsgd file == study_name
+# $4=smoothing value
 
 export SUBJECTS_DIR=$1
 echo $SUBJECTS_DIR
-smoothing=10
+smoothing=$4
 
 study_file="$(basename $2)"
 study_name="${study_file%.*}"

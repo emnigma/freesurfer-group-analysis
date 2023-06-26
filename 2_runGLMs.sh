@@ -3,8 +3,9 @@
 # $2=path to contrasts file
 # $3=path with preproc results
 # $4=path to folder to save results
+# $5=smoothing value
 
-smoothness=10
+smoothness=$5
 
 study_file="$(basename $1)"
 study_name="${study_file%.*}"

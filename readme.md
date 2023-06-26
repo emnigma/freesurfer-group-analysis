@@ -2,7 +2,7 @@
 
 ## Reconstruction
 
-before group analysis start you need to reconstruct all study subjects by running [run_all.sh](/run_all.sh) in subjects folder
+before group analysis start you need to reconstruct all study subjects by running [run_all.sh](/run_all.sh), supplied by necessary arguments (read below)
 
 ## Set up
 
@@ -22,9 +22,10 @@ bash run_all.sh ./msa-c_vs_gamers_control/subjects/ ./degradation_study.fsgd con
 - run_all.sh generates two analysis results, one for negative contrast, one for positive contrast. we need to visualize the one with correct clusters, for example:
 
 good output:
-![image](/resources/good_output.png)
+![image](/resources/good1.png)
+![image](/resources/good2.png)
 
-with existing cluster info:
+with existing cluster info (for the first picture):
 ```
 ...
 # ClusterNo  Max   VtxMax   Size(mm^2)  MNIX   MNIY   MNIZ    CWP    CWPLow    CWPHi   NVtxs    WghtVtx   Annot
@@ -34,9 +35,10 @@ with existing cluster info:
 ```
 
 bad output:
-![image](/resources/bad_output.png)
+![image](/resources/bad1.png)
+![image](/resources/bad2.png)
 
-with empty cluster info:
+with empty cluster info (for both pictures):
 ```
 ...
 # ClusterNo  Max   VtxMax   Size(mm^2)  MNIX   MNIY   MNIZ    CWP    CWPLow    CWPHi   NVtxs    WghtVtx   Annot
