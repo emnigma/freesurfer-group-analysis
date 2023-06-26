@@ -28,6 +28,7 @@ do
             --fsgd $study_name.fsgd \
             --C $contrast_file \
             --cortex \
-            --glmdir $glm_results_dir/$hemi.$meas.$study_name.$smoothness.glmdir
+            --glmdir $glm_results_dir/$hemi.$meas.$study_name.$smoothness.glmdir \
+            --surface $target_subject $hemi
     done
 done

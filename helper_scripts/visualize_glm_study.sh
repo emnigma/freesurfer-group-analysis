@@ -8,4 +8,4 @@ echo $SUBJECTS_DIR
 contrasts_file="$(basename $3)"
 contrasts_name="${contrasts_file%.*}"
 
-freeview -f $SUBJECTS_DIR/$2/surf/lh.inflated:annot=aparc.annot:annot_outline=1:overlay=$2:overlay_threshold=3,5 -viewport 3d -layout 1
+freeview -f $SUBJECTS_DIR/$2/surf/lh.inflated:annot=aparc.annot:annot_outline=1:overlay=$3:overlay_threshold=3,5 -viewport 3d -layout 1

@@ -6,4 +6,4 @@ bash run_all.sh \
     degradation_study.fsgd \
     control_vs_msa-c.mtx \
     msa-c_vs_control.mtx \
-    ICBM2009c_asym_nlin
+    fsaverage
