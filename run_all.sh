@@ -51,13 +51,15 @@ bash 3_runClusterSims.sh \
 # to check results
 for contrast in $contrasts_file_1_name $contrasts_file_2_name
 do
-    bash helper_scripts/visualize_glm_study.sh \
-    $subjects_dir \
-    $glm_dir/lh.thickness.$study_name.10.glmdir/$contrast/sig.mgh &
+    data=$glm_dir/lh.thickness.$study_name.10.glmdir/$contrast/cache.th30.pos.sig.cluster.mgh
+    save_name="$hemi".thickness.10.normalized2conn_reference.mgh
 
-    bash helper_scripts/visualize_cluster_study.sh \
-    $subjects_dir \
-    $glm_dir/lh.thickness.$study_name.10.glmdir/$contrast/cache.th30.pos.sig.cluster.mgh &
-
-    cat $glm_dir/lh.thickness.$study_name.10.glmdir/$contrast/cache.th30.pos.sig.cluster.summary
+    mri_surf2surf \
+        --srcsubject fsaverage \
+        --srcsurfval $data \
+        --trgsubject referenceT1_fs \
+        --trgsurfval $save_name \
+        --hemi $hemi
+    
+    freeview -f $SUBJECTS_DIR/referenceT1_fs/surf/"$hemi".white:overlay=$save_name
 done
