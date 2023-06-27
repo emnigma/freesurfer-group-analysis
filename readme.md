@@ -15,6 +15,8 @@ bash command example:
 bash run_all.sh ./msa-c_vs_gamers_control/subjects/ ./degradation_study.fsgd control_vs_msa-c.mtx msa-c_vs_control.mtx 
 ```
 
+cluster info in: `$glm_dir/lh.thickness.$study_name.$smoothing.glmdir/$contrast/cache.th30.pos.sig.cluster.summary`
+
 ## Remarks
 
 - recon_all_in_folder.sh assumes that every subject has its own folder, in each subj folder there is a single MPRAGE file which freesurfer will user for reconstruction

@@ -60,6 +60,8 @@ for contrast in $contrasts_file_1_name $contrasts_file_2_name
 do
     for hemi in lh rh
     do
+        # cluster summary info
+        cat $glm_dir/lh.thickness.$study_name.$smoothing.glmdir/$contrast/cache.th30.pos.sig.cluster.summary
         data=$glm_dir/lh.thickness.$study_name.$smoothing.glmdir/$contrast/cache.th30.pos.sig.cluster.mgh
         save_name="$hemi".thickness.$smoothing.$contrast.normalized2conn_reference.mgh
 
