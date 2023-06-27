@@ -1,6 +1,6 @@
 #!/bin/bash
 # $1=path to your subjects dir (here subjects will be saved)
-# $2=path to folder with patients
+# $2=path to source folder with patients data
 
 export SUBJECTS_DIR=$1
 echo $SUBJECTS_DIR

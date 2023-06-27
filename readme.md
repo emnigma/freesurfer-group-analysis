@@ -2,11 +2,13 @@
 
 ## Reconstruction
 
-before group analysis start you need to reconstruct all study subjects by running [run_all.sh](/run_all.sh), supplied by necessary arguments (read below)
+before group analysis start you need to reconstruct all study subjects by running [recon_all_in_folder.sh](/recon_all_in_folder.sh)
 
 ## Set up
 
-before before group analysis start you need to supply .fsgd file ([example](/degradation_study.fsgd)) with your reconstructed subjects separated into two classes and two .mtx contrast files with "1 -1", "-1 1" in them ([1](/control_vs_msa-c.mtx), [2](/msa-c_vs_control.mtx))
+- create .fsgd file ([example](/degradation_study.fsgd)) with your reconstructed subjects separated into two classes and two .mtx contrast files with "1 -1", "-1 1" in them ([1](/control_vs_msa-c.mtx), [2](/msa-c_vs_control.mtx))
+
+- move referenceT1_fs into freesurfer SUBJECTS_DIR
 
 ## Run
 
@@ -17,11 +19,11 @@ bash run_all.sh ./msa-c_vs_gamers_control/subjects/ ./degradation_study.fsgd con
 
 cluster info in: `$glm_dir/lh.thickness.$study_name.$smoothing.glmdir/$contrast/cache.th30.pos.sig.cluster.summary`
 
-## Remarks
+## Info
 
-- recon_all_in_folder.sh assumes that every subject has its own folder, in each subj folder there is a single MPRAGE file which freesurfer will user for reconstruction
+- recon_all_in_folder.sh assumes that every subject has its own folder, in each subj folder there is a single MPRAGE file in .nii which freesurfer will use for reconstruction
 
-- run_all.sh generates two analysis results, one for negative contrast, one for positive contrast. we need to visualize the one with correct clusters, for example:
+- run_all.sh generates two analysis results, one for negative contrast, one for positive contrast. we need to consider the one with not empty clusters, for example:
 
 good output:
 ![image](/resources/good1.png)
