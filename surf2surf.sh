@@ -10,10 +10,10 @@ do
     mri_surf2surf \
         --srcsubject fsaverage \
         --srcsurfval $data \
-        --trgsubject referenceT1_fs \
+        --trgsubject mni_icbm152 \
         --trgsurfval $save_name \
         --hemi $hemi
     
-    freeview -f $SUBJECTS_DIR/referenceT1_fs/surf/"$hemi".white:overlay=$save_name
+    freeview -f $SUBJECTS_DIR/mni_icbm152/surf/"$hemi".white:overlay=$save_name
 done
 
